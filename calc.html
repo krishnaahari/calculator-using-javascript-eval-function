@@ -1,0 +1,75 @@
+<html>
+<head>
+
+<style>
+#clear{
+  width:400px;
+  height:50px;
+  }
+.formstyle{
+border:double;
+border-color:red;
+background-color:red;
+width:400px;
+height:320px;
+margin:auto;
+}
+input{
+width:130px;
+color: white;
+background-color:green;
+background-border:double;
+border:double;
+}
+#test{
+width:400px;
+ height:45px;
+border:double;
+}
+
+body{
+background-image:url(https://wallpaperaccess.com/full/215112.jpg);
+background-repeat:no-repeat;
+background-size:100%;
+}
+
+h1{
+color:red;
+text-align:center;
+font-size:60px;
+font-family:
+}
+
+</style>
+</head>
+<body>
+
+<h1>Calculator</h1>
+<div class="formstyle">
+<form name="form">
+<input type="text" name="answer" id="test"> <br> <br>
+
+<input type="button"  value="1" onclick="form.answer.value +='1'">
+<input type="button"  value="2" onclick="form.answer.value +='2'">
+<input type="button"  value="3" onclick="form.answer.value +='3'">
+<br><br>
+<input type="button"  value="4" onclick="form.answer.value +='4'">
+<input type="button"  value="5" onclick="form.answer.value +='5'">
+<input type="button"  value="6" onclick="form.answer.value +='6'">
+<br><br>
+<input type="button"  value="7" onclick="form.answer.value +='7'">
+<input type="button"  value="8" onclick="form.answer.value +='8'">
+<input type="button"  value="9" onclick="form.answer.value +='9'">
+<br><br>
+<input type="button"  value="+" onclick="form.answer.value +='+'">
+<input type="button"  value="0" onclick="form.answer.value +='0'">
+<input type="button"  value="-" onclick="form.answer.value +='-'">
+<br><br>
+<input type="button"  value="*" onclick="form.answer.value +='*'">
+<input type="button"  value="/" onclick="form.answer.value +='/'">
+<input type="button"  value="=" onclick="form.answer.value = eval(form.answer.value)">
+<br><br>
+<input type="button"  value="clear all" onclick="form.answer.value=''" id="clear">
+
+</body>
+</html>
