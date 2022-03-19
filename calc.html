@@ -1,75 +1,109 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
 
-<style>
-#clear{
-  width:400px;
-  height:50px;
-  }
-.formstyle{
-border:double;
-border-color:red;
-background-color:red;
-width:400px;
-height:320px;
-margin:auto;
-}
-input{
-width:130px;
-color: white;
-background-color:green;
-background-border:double;
-border:double;
-}
-#test{
-width:400px;
- height:45px;
-border:double;
-}
-
-body{
-background-image:url(https://wallpaperaccess.com/full/215112.jpg);
-background-repeat:no-repeat;
-background-size:100%;
-}
-
-h1{
-color:red;
-text-align:center;
-font-size:60px;
-font-family:
-}
-
-</style>
+	  body{
+	  	 background-image: url("https://images.unsplash.com/photo-1611125832047-1d7ad1e8e48f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FsY3VsYXRvcnxlbnwwfHwwfHw%3D&w=1000&q=80");
+	  	 background-repeat: no-repeat;
+	  	 background-size: cover;
+	  }
+	  form{
+	  	margin-top: 5em;
+	  	width: 40em;
+	  	position: absolute;
+	  	left: 25%;
+	  	background-color: rgba(0, 0, 0, 0.6);
+	  	padding: 10px;
+	  	border-top: 10px solid  #0066ff;
+	  	border-left: 10px solid #0066ff;
+	  		border-bottom: 2px solid  #0066ff;
+	  	border-right: 2px solid #0066ff;
+	  }
+	  #ans{
+	  	width: 22em;
+	  	height: 2em;
+	  	outline: none;
+	/*  	border: 1px solid blue;*/
+	  	font-size: 28px;
+	  	margin-left: 5px;
+	  	font-weight: 500;
+	  	border-radius: 0px;
+	  	background-color: #fff;
+	  	box-shadow: 0px 0px 0.5px black;
+	  	color: #00b8e6;
+	  }
+	  input{
+	  	width: 5em;
+	  	/*margin-left: 58px;*/
+	  	height: 3em;
+      cursor: pointer;
+	  	border-radius: 10px;
+	  	border: none;
+	  	box-shadow: 0px 0px 7px #00b8e6;
+	  	font-size: 18px;
+	  	transition: 0.4s;
+	  }
+	  #row1:hover,#row2:hover,#row3:hover{
+	  	background: linear-gradient(#fff,  #cc0000);
+	  	color: #fff;
+	  }
+   #row1{
+   	margin-left: 20px;
+   }
+   #row2{
+   	position: relative;
+   	margin-left: 10em;
+   }
+    #row3{
+   	position: relative;
+   	margin-left: 7em;
+   }
+     #clear{
+     	margin-left: 30px;
+     	width: 30em;
+     	  	background: linear-gradient(#fff, #0033cc);
+	  	color: #660066;
+     }
+     h1{
+     	color: red;
+     	position: absolute;
+     	margin-left: 40%;
+     	margin-top: 15px;
+     	text-decoration: underline;
+     }
+	</style>
 </head>
 <body>
-
-<h1>Calculator</h1>
-<div class="formstyle">
-<form name="form">
-<input type="text" name="answer" id="test"> <br> <br>
-
-<input type="button"  value="1" onclick="form.answer.value +='1'">
-<input type="button"  value="2" onclick="form.answer.value +='2'">
-<input type="button"  value="3" onclick="form.answer.value +='3'">
-<br><br>
-<input type="button"  value="4" onclick="form.answer.value +='4'">
-<input type="button"  value="5" onclick="form.answer.value +='5'">
-<input type="button"  value="6" onclick="form.answer.value +='6'">
-<br><br>
-<input type="button"  value="7" onclick="form.answer.value +='7'">
-<input type="button"  value="8" onclick="form.answer.value +='8'">
-<input type="button"  value="9" onclick="form.answer.value +='9'">
-<br><br>
-<input type="button"  value="+" onclick="form.answer.value +='+'">
-<input type="button"  value="0" onclick="form.answer.value +='0'">
-<input type="button"  value="-" onclick="form.answer.value +='-'">
-<br><br>
-<input type="button"  value="*" onclick="form.answer.value +='*'">
-<input type="button"  value="/" onclick="form.answer.value +='/'">
-<input type="button"  value="=" onclick="form.answer.value = eval(form.answer.value)">
-<br><br>
-<input type="button"  value="clear all" onclick="form.answer.value=''" id="clear">
-
+	<h1>CALCULATOR</h1>
+	<form>
+		
+	<input type="text"  name="answer" id="ans" disabled>
+	<br><br>
+	<input type="button" id="row1" name="" value="1" onclick="form.answer.value +='1'">
+	<input type="button" id="row2" name="" value="2" onclick="form.answer.value +='2'">
+	<input type="button" name="" id="row3" value="3" onclick="form.answer.value +='3'">
+		<br><br>
+	<input type="button" id="row1" name="" value="4" onclick="form.answer.value +='4'">
+	<input type="button" id="row2" name="" value="5" onclick="form.answer.value +='5'">
+	<input type="button" id="row3" name="" value="6" onclick="form.answer.value +='6'">
+		<br><br>
+	<input type="button" id="row1" name="" value="7" onclick="form.answer.value +='7'">
+	<input type="button" id="row2" name="" value="8" onclick="form.answer.value +='8'">
+	<input type="button" id="row3" name="" value="9" onclick="form.answer.value +='9'">
+		<br><br>
+	<input type="button" id="row1" name="" value="0" onclick="form.answer.value +='0'">
+	<input type="button" id="row2" name="" value="+" onclick="form.answer.value +='+'">
+	<input type="button"  id="row3" name="" value="*" onclick="form.answer.value +='*'">
+		<br><br>
+	<input type="button" id="row1" name="" value="-" onclick="form.answer.value +='-'">
+	<input type="button" id="row2" name="" value="/" onclick="form.answer.value +='/'">
+	<input type="button" id="row3" name="" value="=" onclick="form.answer.value =eval(form.answer.value)">
+		<br><br>
+	<input type="button" id="clear" name="" value="clear" id="clear" onclick="form.answer.value =''">
+</form>
 </body>
 </html>
